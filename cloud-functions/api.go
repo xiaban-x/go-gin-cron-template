@@ -130,7 +130,7 @@ func createUserHandler(c *gin.Context) {
 // cronHeartbeatHandler handles the heartbeat cron job
 func cronHeartbeatHandler(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
-		"status":    "alive2",
+		"status":    "alive6",
 		"timestamp": time.Now().UTC().Format(time.RFC3339),
 		"job":       "heartbeat",
 	})

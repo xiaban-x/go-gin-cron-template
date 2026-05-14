@@ -2,8 +2,14 @@
   "schedules": [
     {
       "name": "heartbeat",
-      "cron": "*/5 * * * *",
+      "cron": "0 * * * *",
       "path": "/api/v1/cron/heartbeat",
+      "method": "GET"
+    },
+    {
+      "name": "health-check",
+      "cron": "30 * * * *",
+      "path": "/api/v1/cron/health-check",
       "method": "GET"
     },
     {
@@ -14,8 +20,58 @@
       "payload": {
         "type": "daily",
         "dryRun": false
-      },
-      "timeout": 60
+      }
+    },
+    {
+      "name": "daily-report",
+      "cron": "0 8 * * *",
+      "path": "/api/v1/cron/report",
+      "method": "POST",
+      "payload": {
+        "type": "daily"
+      }
+    },
+    {
+      "name": "daily-backup",
+      "cron": "0 3 * * *",
+      "path": "/api/v1/cron/backup",
+      "method": "POST"
+    },
+    {
+      "name": "daily-sync",
+      "cron": "0 6 * * *",
+      "path": "/api/v1/cron/sync",
+      "method": "POST"
+    },
+    {
+      "name": "daily-analytics",
+      "cron": "0 9 * * *",
+      "path": "/api/v1/cron/analytics",
+      "method": "POST"
+    },
+    {
+      "name": "daily-notify",
+      "cron": "0 10 * * *",
+      "path": "/api/v1/cron/notify",
+      "method": "POST"
+    },
+    {
+      "name": "daily-archive",
+      "cron": "0 4 * * *",
+      "path": "/api/v1/cron/archive",
+      "method": "POST"
+    },
+    {
+      "name": "daily-rotate",
+      "cron": "0 5 * * *",
+      "path": "/api/v1/cron/rotate",
+      "method": "POST"
+    },
+    {
+      "name": "daily-summary",
+      "cron": "0 23 * * *",
+      "path": "/api/v1/cron/summary",
+      "method": "POST"
     }
   ]
 }

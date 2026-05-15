@@ -36,12 +36,6 @@
       "cron": "0 9 * * *",
       "path": "/api/v1/cron/analytics",
       "method": "POST"
-    },
-    {
-      "name": "daily-notify",
-      "cron": "0 10 * * *",
-      "path": "/api/v1/cron/notify",
-      "method": "POST"
     }
   ]
 }

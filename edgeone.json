@@ -1,18 +1,6 @@
 {
   "schedules": [
     {
-      "name": "heartbeat",
-      "cron": "0 * * * *",
-      "path": "/api/v1/cron/heartbeat",
-      "method": "GET"
-    },
-    {
-      "name": "health-check",
-      "cron": "30 * * * *",
-      "path": "/api/v1/cron/health-check",
-      "method": "GET"
-    },
-    {
       "name": "daily-cleanup",
       "cron": "0 2 * * *",
       "path": "/api/v1/cron/cleanup",

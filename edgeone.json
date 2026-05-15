@@ -42,24 +42,6 @@
       "cron": "0 10 * * *",
       "path": "/api/v1/cron/notify",
       "method": "POST"
-    },
-    {
-      "name": "daily-archive",
-      "cron": "0 4 * * *",
-      "path": "/api/v1/cron/archive",
-      "method": "POST"
-    },
-    {
-      "name": "daily-rotate",
-      "cron": "0 5 * * *",
-      "path": "/api/v1/cron/rotate",
-      "method": "POST"
-    },
-    {
-      "name": "daily-summary",
-      "cron": "0 23 * * *",
-      "path": "/api/v1/cron/summary",
-      "method": "POST"
     }
   ]
 }
